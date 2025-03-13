@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -19,6 +18,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Technologies Used
+
+1. NextJS
+2. TailwindCss
+3. TypeSCript
+4. EsLint
+5. Convex ( backendless code - we are using convext data backend )
+6. shadcn ui
+
+
+## Packages learned
+1. clsx - ( object syntax )
+2. twMerge - ( applying one class based on condition )
+for conditional classes
 
 ## Learn More
 
