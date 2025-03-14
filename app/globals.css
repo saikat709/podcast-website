@@ -44,8 +44,8 @@
 } */
 
 body {
-  background-color: #101114;
-  /* background: linear-gradient(270deg, rgb(233, 233, 190) 0%, rgba(214, 179, 179, 0) 100%) */
+  /* background-color: #101114; */
+  background: linear-gradient(270deg, rgb(75, 88, 85) 100%, rgba(121, 22, 22, 0) 50%)
 }
 
 @utility bg-nav-focus {

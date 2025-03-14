@@ -26,7 +26,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 3. TypeSCript
 4. EsLint
 5. Convex ( backendless code - we are using convext data backend )
-6. shadcn ui
+6. shadcn ui  ( UI library )
+7. Clerk  ( for authentication )
 
 
 ## Packages learned

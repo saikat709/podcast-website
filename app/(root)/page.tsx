@@ -1,17 +1,25 @@
+"use client";
+
 import PodcastCard from "@/components/PodcastCard";
 import { Button } from "@/components/ui/button";
 import { podcastData } from "@/constants";
 import React from 'react';
 
+import { api } from "@/convex/_generated/api";
+import { useQuery } from "convex/react";
+
 const Home = () => {
+
+  const tasks = useQuery(api.tasks.get);
+
+  console.log(tasks);
+
   return (
     <div className="flex flex-col gap-5 mt-10">
       <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1"> Trending Podcasts </h1>
-       <div className="podcast_grid">
-        {/* <Button variant={"outline"}> Button </Button> */}
-        {
-          podcastData.map( (podcast) => {
+       <div className="podcast_grid flex-1 mx-auto p-1">
+        { podcastData.map( (podcast) => {
             return <PodcastCard 
               key={podcast.id}
               id={podcast.id}
