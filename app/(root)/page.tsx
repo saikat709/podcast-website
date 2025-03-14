@@ -1,7 +1,6 @@
 "use client";
 
 import PodcastCard from "@/components/PodcastCard";
-import { Button } from "@/components/ui/button";
 import { podcastData } from "@/constants";
 import React from 'react';
 
@@ -11,7 +10,6 @@ import { useQuery } from "convex/react";
 const Home = () => {
 
   const tasks = useQuery(api.tasks.get);
-
   console.log(tasks);
 
   return (

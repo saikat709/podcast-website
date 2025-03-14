@@ -159,12 +159,18 @@ export const getPodcastBySearch = query({
       return titleSearch;
     }
 
-    // return await ctx.db
-    //   .query("podcasts")
-    //   .withSearchIndex("search_body" as never, (q) =>
-    //     // q.search(  "podcastDescription" as never || "podcastTitle"  as never, args.search)
-    //   )
-    //   .take(10);
+    const byBody =  await ctx.db
+      .query("podcasts")
+      .withSearchIndex("search_body" as never, (q) =>
+        q.search( "podcastDescription" as never , args.search)
+      ).take(10)
+    const byTitle = await ctx.db
+      .query("podcasts").withSearchIndex("search_title" as never, (q ) => 
+        q.search( "podcastTitle"  as never, args.search )
+      )
+      .take(10);
+    
+      return [ ...byBody, ...byTitle ];
   },
 });
 
